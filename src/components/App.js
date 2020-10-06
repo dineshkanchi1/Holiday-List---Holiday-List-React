@@ -34,14 +34,16 @@ class App extends Component {
           let indiaCities = locations.filter((el) => el.country === "India");
           return (
             <>
+            <ol>
               {indiaCities.map((el, index) => (
-                <h1 key={"location" + (index + 1)}>{el.city}</h1>
+                <li key={"location" + (index + 1)}>{el.city}</li>
               ))}
-              {/* {locations
+              {locations
                 .filter((el) => el.country !== "India")
                 .map((el, index) => (
-                  <h1 key={"location" + (indiaCities.length + index + 1)}>{el.city}</h1>
-                ))} */}
+                  <li key={"location" + (indiaCities.length + index + 1)}>{el.city}</li>
+                ))}
+                </ol>
             </>
           );
     }
