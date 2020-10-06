@@ -31,11 +31,10 @@ class App extends Component {
             }
           ];
         
-          let indiaCities = locations.filter((el) => el.country === "India");
           return (
             <>
             <ol>
-              {indiaCities.map((el, index) => (
+              {locations.filter((el) => el.country === "India").map((el, index) => (
                 <li key={"location" + (index + 1)}>{el.city}</li>
               ))}
                 </ol>
