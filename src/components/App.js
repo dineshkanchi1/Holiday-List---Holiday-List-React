@@ -32,7 +32,12 @@ class App extends Component {
         ]
         return(
            <>
-            {locations.filter((el) => el.country==="India").map((el,index)=>(<h1 key={index+1}>{el.city}</h1>))}
+            {
+            let indian=locations.filter((el) => el.country==="India");
+            indian.map((el,index)=>(<h1 key={index+1}>{el.city}</h1>));
+            let others=locations.filter((el) => el.country!=="India");
+            others.map((el,index)=>(<h1 key={indian.length+index+1}>{el.city}</h1>))
+            }
 	    </>
         )
     }
