@@ -37,11 +37,11 @@ class App extends Component {
               {indiaCities.map((el, index) => (
                 <h1 key={"location" + (index + 1)}>{el.city}</h1>
               ))}
-              {locations
+              {/* {locations
                 .filter((el) => el.country !== "India")
                 .map((el, index) => (
                   <h1 key={"location" + (indiaCities.length + index + 1)}>{el.city}</h1>
-                ))}
+                ))} */}
             </>
           );
     }
